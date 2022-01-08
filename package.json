@@ -1,0 +1,15 @@
+{
+  "name": "mastering-code-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --collectCoverage=false"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.5"
+  }
+}
