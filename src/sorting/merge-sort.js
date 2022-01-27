@@ -1,9 +1,9 @@
 function mergeSort(array) {
   if (array.length <= 1) return array;
   const middle = Math.floor(array.length / 2);
-  const leftSide = mergeSort(array.slice(0, middle));
-  const rightSide = mergeSort(array.slice(middle, array.length));
-  const sorted = merge(leftSide, rightSide);
+  const left = mergeSort(array.slice(0, middle));
+  const right = mergeSort(array.slice(middle, array.length));
+  const sorted = merge(left, right);
   return sorted; 
 }
 
@@ -11,29 +11,31 @@ function merge(left, right) {
   let i = 0;
   let j = 0;
   const array = [];
-  while (i <= left.length && j <= right.length) {
+  while (i < left.length && j < right.length) {
     if (left[i] <= right[j]) {
-      let num = left.shift();
+      let num = left[i];
       array.push(num);
       i += 1;
     }
     else {
-      let num = right.shift();
+      let num = right[j];
       array.push(num);
       j += 1;
     }
   }
 
-  while (left.length > 0) {
-    let num = left.shift();
+  while (left.length > i) {
+    let num = left[i];
     array.push(num);
+    i += 1;
   }
 
-  while (right.length > 0) {
-    let num = right.shift();
+  while (right.length > j) {
+    let num = right[j];
     array.push(num);
+    j += 1;
   }
-  
+
   return array;
 }
 
