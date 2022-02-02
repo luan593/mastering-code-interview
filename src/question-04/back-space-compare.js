@@ -1,3 +1,5 @@
+'use strict';
+
 function buildString(string) {
   const array = [];
   for (let pos = 0; pos < string.length; pos++) {

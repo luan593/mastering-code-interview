@@ -20,17 +20,21 @@ function partition(array, low, high) {
   return i;
 }
 
-function quickSort(array, low, high) {
+function quickSelection(array, low, high, index) {
   if (low < high) {
-    let partitionIndex = partition(array, low, high);
-    quickSort(array, low, partitionIndex - 1);
-    quickSort(array, partitionIndex + 1, high);
+    partitionIndex = partition(array, low, high);
+    if (partitionIndex === index) {
+      return array[partitionIndex];
+    }
+    if (index < partitionIndex) {
+      return quickSelection(array, low, partitionIndex - 1, index);
+    }
+    if (index > partitionIndex) {
+      return quickSelection(array, partitionIndex + 1, high, index);
+    }
   }
-  // This line is just for testing purpose.
-  // The array is already sorted without the need of returning it.
-  return array; 
 }
 
 module.exports = {
-  quickSort
+  quickSelection
 }

@@ -6,31 +6,36 @@ function swap(array, i, j) {
 
 function partition(array, low, high) {
   const pivot = array[high];
-  let i = low - 1;
-  for (let j = low; j <= high; j ++) {
+  let i = low;
+  for (let j = low; j < high; j ++) {
     if (array[j] < pivot) {
-      i ++;
       if (i !== j) {
         swap(array, i, j);
       }
+      i ++;
     }
   }
-  i ++;
   swap(array, i, high);
   return i;
 }
 
 function quickSort(array, low, high) {
   if (low < high) {
-    let partitionIndex = partition(array, low, high);
+    const partitionIndex = partition(array, low, high);
     quickSort(array, low, partitionIndex - 1);
     quickSort(array, partitionIndex + 1, high);
   }
-  // This line is just for testing purpose.
-  // The array is already sorted without the need of returning it.
-  return array; 
+}
+
+function getKthLargest(array, k) {
+  if (k === 0 || array.length < k) { 
+    return undefined;
+  }
+  const indexToFind = array.length - k;
+  quickSort(array, 0, array.length - 1);
+  return array[indexToFind];
 }
 
 module.exports = {
-  quickSort
+  getKthLargest
 }

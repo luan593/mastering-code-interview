@@ -1,3 +1,5 @@
+'use strict';
+
 function twoSum(array, target) {
   if (array.length < 2) return null;
   const container = new Map();

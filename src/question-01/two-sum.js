@@ -1,3 +1,5 @@
+'use strict';
+
 function twoSum(array, target) {
   if (array.length === 0 && array.length === 1) return null;
   for (let i = 0; i < array.length - 1; i++) {
