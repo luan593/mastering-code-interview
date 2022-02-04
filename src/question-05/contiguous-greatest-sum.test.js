@@ -10,15 +10,15 @@ describe('greatestSum() ➞ ', () => {
     expect(greatestSum([1])).toBe(null);
   });
 
-  it('greatestSum([10, 8]) ➞ null', () => {
+  it('greatestSum([10, 8]) ➞ 18', () => {
     expect(greatestSum([10, 8])).toBe(18);
   });
 
-  it('greatestSum([10, -1, 22]) ➞ null', () => {
+  it('greatestSum([10, -1, 22]) ➞ 21', () => {
     expect(greatestSum([10, -1, 22])).toBe(21);
   });
 
-  it('greatestSum([1, 3, 7, 9, 2, 4]) ➞ null', () => {
+  it('greatestSum([1, 3, 7, 9, 2, 4]) ➞ 16', () => {
     expect(greatestSum([1, 3, 7, 9, 2, 4])).toBe(16);
   });
 

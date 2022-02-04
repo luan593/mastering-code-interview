@@ -8,7 +8,7 @@ function removeHashtag(str) {
   return str;
 }
 
-function backspaceCompare(str1, str2) {
+function backSpaceCompare(str1, str2) {
   while (`${str1}${str2}`.includes("#")) {
     if (str1.includes("#")) {
       str1 = removeHashtag(str1);
@@ -20,4 +20,6 @@ function backspaceCompare(str1, str2) {
   return str1 === str2;
 }
 
-module.exports = backspaceCompare;
+module.exports = {
+  backSpaceCompare
+}

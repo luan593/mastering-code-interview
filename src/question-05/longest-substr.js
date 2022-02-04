@@ -2,7 +2,7 @@
 
 /**
  * @param {string} str
- * @return {number}
+ * @returns {number}
  */
 
 function longest(str) {
