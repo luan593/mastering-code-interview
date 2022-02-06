@@ -1,6 +1,6 @@
 const { backSpaceCompare } = require('./../question-04/typed-out-string-op');
 
-describe('Typed Out String', () => {
+describe('Backspace compare string', () => {
 
     it('backSpaceCompare("ab#z", "az#z") ➞ true', () => {
         expect(backSpaceCompare("ab#z", "az#z")).toBe(true);
