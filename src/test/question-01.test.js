@@ -18,7 +18,7 @@ describe('twoSum', () => {
     it('twoSum([5], 5) ➞ null', () => {
         expect(twoSum([5], 5)).toBe(null);
     });
-
+  
     it('twoSum([1,6], 7) ➞ [0,1]', () => {
         expect(twoSum([1,6], 7)).toEqual([0,1]);
     });
